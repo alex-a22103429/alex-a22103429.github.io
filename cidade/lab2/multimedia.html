@@ -4,6 +4,98 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>San Gimignano - Multimédia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .poema-container {
+        background-color: #f9f6f0;
+        padding: 20px;
+        border-left: 4px solid #8b5a2b;
+        margin: 20px 0;
+        max-width: 500px;
+      }
+      /* 1. Versos ímpares (1º, 3º, 5º, 7º...): Texto normal com um tom castanho escuro */
+      .poema-container p:nth-child(odd) {
+        color: #4a2e16;
+        padding-left: 0px;
+      }
+
+      /* 2. Versos pares (2º, 4º, 6º, 8º...): Avançados para a direita com tom dourado */
+      .poema-container p:nth-child(even) {
+        color: #a06d14;
+        padding-left: 25px;
+        font-style: italic;
+      }
+
+      /* 3. Primeiro verso (1º filho): Destacado em maiúsculas e a negrito */
+      .poema-container p:nth-child(1) {
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #8b5a2b;
+      }
+
+      /* 4. Quinto verso (fim da primeira estrofe): Espaçamento maior em baixo */
+      .poema-container p:nth-child(5) {
+        margin-bottom: 20px;
+      }
+
+      /* 5. Último verso (9º filho): Destacado a negrito como conclusão do poema */
+      .poema-container p:nth-child(9) {
+        font-weight: bold;
+        color: #2c1a0e;
+        border-top: 1px dashed #d3c4b1;
+        padding-top: 10px;
+      }
+
+      .fotografias {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        background-color: rgb(250, 250, 250);
+        padding: 10px;
+      }
+
+      .fotografias img {
+        width: 150px;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: rgb(90, 197, 216);
+      }
+
+      /* FIX QUE FIZ QUANDO ADICIONEI O STYLE PARTIU AQUI */
+      nav.ancoras {
+        background: none;
+        padding: 0;
+        margin: 20px 0 30px 0;
+      }
+
+      nav.ancoras ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav.ancoras a {
+        color: #0077cc;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 6px 12px;
+        background-color: #f0f4f8;
+        border-radius: 6px;
+        transition: background-color 0.2s ease;
+      }
+
+      nav.ancoras a:hover {
+        background-color: #d0e2f0;
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -18,29 +110,68 @@
 
     <main>
       <h2>Multimédia</h2>
-      <p>
-        Vê este vídeo com uma vista panorâmica em drone da cidade de San
-        Gimignano:
-      </p>
+      <p>Nesta página encontra conteúdos multimédia sobre San Gimignano.</p>
+      <nav class="ancoras">
+        <ul>
+          <li><a href="#video">Ir para Vídeo</a></li>
+          <li><a href="#fotografias">Ir para Fotografias</a></li>
+          <li><a href="#poesia">Ir para Poesia</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h3 id="video">Vídeo</h3>
+        <p>
+          Vê este vídeo com uma vista panorâmica em drone da cidade de San
+          Gimignano:
+        </p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/xhRSgDZF33I"
+          title="San Gimignano Drone View"
+          frameborder="0"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+          "
+          allowfullscreen
+        >
+        </iframe>
+      </section>
+      <section>
+        <h3 id="fotografias">Fotografias</h3>
+        <div class="fotografias">
+          <img src="images/facts1.jpg" alt="game vs real life" />
+          <img src="images/jogo1.jpg" alt="gameBeauty" />
+          <img src="images/jogo2.jpg" alt="game vs real life 1" />
+          <img src="images/jogo3.jpg" alt="game vs real life 2" />
+          <img src="images/real1.jpg" alt="mainPraça" />
+          <img src="images/real2.jpg" alt="Vista de longe" />
+          <img src="images/real3.jpg" alt="Vista de cima" />
+          <img src="images/real4.jpg" alt="Gelataria" />
+        </div>
+      </section>
 
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/xhRSgDZF33I"
-        title="San Gimignano Drone View"
-        frameborder="0"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="
-          accelerometer;
-          autoplay;
-          clipboard-write;
-          encrypted-media;
-          gyroscope;
-          picture-in-picture;
-        "
-        allowfullscreen
-      >
-      </iframe>
+      <section>
+        <h3 id="poesia">Poesia</h3>
+        <div class="poema-container">
+          <p>Torres de pedra a tocar o céu,</p>
+          <p>Guardam memórias de um tempo antigo,</p>
+          <p>Onde o sol veste o morro num véu,</p>
+          <p>E a Toscana encontra o seu abrigo.</p>
+
+          <p>Pelas vielas de pedra e história,</p>
+          <p>Ezio saltou sob o luar da cidade,</p>
+          <p>San Gimignano gravou na memória,</p>
+          <p>Orgulho, encanto e eternidade.</p>
+          <p>Cidade das torres sem fim.</p>
+        </div>
+      </section>
     </main>
 
     <footer>

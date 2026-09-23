@@ -4,6 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>San Gimignano - Informação</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 600px;
+        margin: 20px 0;
+        font-family: Arial, sans-serif;
+      }
+
+      table,
+      th,
+      td {
+        border: 2px solid #555;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        color: #1a365d;
+        font-weight: bold;
+      }
+
+      td {
+        color: #2d3748;
+      }
+
+      .categoria {
+        background-color: #e2e8f0;
+        color: #742a2a;
+        font-weight: bold;
+      }
+
+      .website-link {
+        color: #2b6cb0;
+        text-decoration: underline;
+      }
+
+      .curiosidades {
+        background-color: #fffaf0;
+        padding: 20px 20px 20px 40px;
+        border-left: 4px solid #dd6b20;
+        max-width: 600px;
+      }
+
+      .curiosidades li {
+        margin-bottom: 10px;
+        color: #4a5568;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -18,28 +76,102 @@
 
     <main>
       <h2>Informação Turística</h2>
-      <p>O que visitar em San Gimignano:</p>
+      <section>
+        <p>O que visitar em San Gimignano:</p>
 
-      <ul>
-        <li>
-          <strong>Piazza della Cisterna:</strong> A praça principal da cidade,
-          famosa pelo poço de água medieval no centro.
-        </li>
-        <li>
-          <strong>Torre Grossa:</strong> A torre mais alta da cidade (com 54
-          metros), onde é possível subir para ter uma vista incrível de toda a
-          região.
-        </li>
-        <li>
-          <strong>Duomo di San Gimignano:</strong> A catedral da cidade, repleta
-          de afrescos medievais bem preservados.
-        </li>
-        <li>
-          <strong>Gelateria Dondoli:</strong> Uma das geladarias mais famosas do
-          mundo, localizada na Piazza della Cisterna, conhecida por ter ganho
-          vários campeonatos mundiais de gelado.
-        </li>
-      </ul>
+        <ul>
+          <li>
+            <strong>Piazza della Cisterna:</strong> A praça principal da cidade,
+            famosa pelo poço de água medieval no centro.
+          </li>
+          <li>
+            <strong>Torre Grossa:</strong> A torre mais alta da cidade (com 54
+            metros), onde é possível subir para ter uma vista incrível de toda a
+            região.
+          </li>
+          <li>
+            <strong>Duomo di San Gimignano:</strong> A catedral da cidade,
+            repleta de afrescos medievais bem preservados.
+          </li>
+          <li>
+            <strong>Gelateria Dondoli:</strong> Uma das geladarias mais famosas
+            do mundo, localizada na Piazza della Cisterna, conhecida por ter
+            ganho vários campeonatos mundiais de gelado.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Dados da Cidade</h3>
+        <table>
+          <tr>
+            <th rowspan="2" class="categoria">Demografia</th>
+            <th>População</th>
+            <td>7.105 hab.</td>
+          </tr>
+          <tr>
+            <th>Densidade Populacional</th>
+            <td>89 hab./km²</td>
+          </tr>
+          <tr>
+            <th rowspan="3" class="categoria">Geografia</th>
+            <th>Área</th>
+            <td>79,7 km²</td>
+          </tr>
+          <tr>
+            <th>Região</th>
+            <td>Toscana (Siena)</td>
+          </tr>
+          <tr>
+            <th>País</th>
+            <td>Itália</td>
+          </tr>
+          <tr>
+            <th class="categoria">Website</th>
+            <td colspan="2">
+              <a
+                href="https://www.comune.sangimignano.si.it/"
+                target="_blank"
+                class="website-link"
+              >
+                www.comune.sangimignano.si.it
+              </a>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h3>5 Curiosidades sobre San Gimignano</h3>
+        <ol class="curiosidades">
+          <li>
+            <strong>Manhattan da Idade Média:</strong> Chegou a ter 72 torres
+            medievais no seu auge; hoje restam 14, que criam um visual único no
+            horizonte.
+          </li>
+          <li>
+            <strong>Património Mundial da UNESCO:</strong> O seu centro
+            histórico foi declarado Património Mundial em 1990 devido à
+            preservação da arquitetura medieval.
+          </li>
+          <li>
+            <strong>O Vinho Vernaccia:</strong> Produz um dos vinhos brancos
+            mais antigos e famosos de Itália, o
+            <em>Vernaccia di San Gimignano</em>, mencionado até por Dante
+            Alighieri na Divina Comédia.
+          </li>
+          <li>
+            <strong>Palco do Assassin's Creed II:</strong> A cidade foi recriada
+            ao pormenor no famoso videojogo de 2009, permitindo aos jogadores
+            escalar as suas torres medievais.
+          </li>
+          <li>
+            <strong>Gelado Campeão do Mundo:</strong> Na Piazza della Cisterna
+            encontra-se a <em>Gelateria Dondoli</em>, cujo mestre geladeiro
+            venceu múltiplos campeonatos mundiais de fabrico de gelados.
+          </li>
+        </ol>
+      </section>
     </main>
 
     <footer>
