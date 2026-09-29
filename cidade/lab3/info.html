@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>San Gimignano - Informação</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 10px 0;
+        font-family: Arial, sans-serif;
+      }
+
+      table,
+      th,
+      td {
+        border: 2px solid #555;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        color: #1a365d;
+        font-weight: bold;
+      }
+
+      td {
+        color: #2d3748;
+      }
+
+      .categoria {
+        background-color: #e2e8f0;
+        color: #742a2a;
+        font-weight: bold;
+      }
+
+      .website-link {
+        color: #2b6cb0;
+        text-decoration: underline;
+      }
+
+      .curiosidades {
+        background-color: #fffaf0;
+        padding: 20px 20px 20px 40px;
+        border-left: 4px solid #dd6b20;
+        margin: 0;
+      }
+
+      .curiosidades li {
+        margin-bottom: 10px;
+        color: #4a5568;
+      }
+
+      .info-header-title {
+        text-align: center;
+        margin: 40px 0 20px 0;
+        font-size: 2.5rem;
+        color: #1a365d;
+      }
+
+      /* Container Principal em Grid 2D (12 Colunas) */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 25px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .area-visitar {
+        grid-column: span 12;
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .area-img1 {
+        grid-column: span 7;
+      }
+
+      .area-vazio1 {
+        grid-column: span 5;
+        background: transparent;
+      }
+
+      .area-tabela {
+        grid-column: span 6;
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .area-img2 {
+        grid-column: span 6;
+      }
+
+      .area-curiosidades {
+        grid-column: span 8;
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .area-vazio2 {
+        grid-column: span 4;
+        background: transparent;
+      }
+
+      .pixabay-img {
+        width: 100%;
+        height: 100%;
+        min-height: 250px;
+        max-height: 380px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 850px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+
+        .area-visitar,
+        .area-img1,
+        .area-tabela,
+        .area-img2,
+        .area-curiosidades {
+          grid-column: span 1;
+        }
+
+        .area-vazio1,
+        .area-vazio2 {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>San Gimignano</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="local.html">Localização</a>
+        <a href="multimedia.html">Multimédia</a>
+        <a href="info.html">Informação</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2 class="info-header-title">Informação Turística</h2>
+
+      <div class="grid-container">
+        <!-- O que visitar -->
+        <section class="area-visitar">
+          <h3>O que visitar em San Gimignano</h3>
+          <ul>
+            <li>
+              <strong>Piazza della Cisterna:</strong> A praça principal da
+              cidade, famosa pelo poço de água medieval no centro.
+            </li>
+            <li>
+              <strong>Torre Grossa:</strong> A torre mais alta da cidade (com 54
+              metros), onde é possível subir para ter uma vista incrível de toda
+              a região.
+            </li>
+            <li>
+              <strong>Duomo di San Gimignano:</strong> A catedral da cidade,
+              repleta de afrescos medievais bem preservados.
+            </li>
+            <li>
+              <strong>Gelateria Dondoli:</strong> Uma das geladarias mais
+              famosas do mundo, localizada na Piazza della Cisterna, conhecida
+              por ter ganho vários campeonatos mundiais de gelado.
+            </li>
+          </ul>
+        </section>
+
+        <div class="area-img1">
+          <img
+            src="images/imagemsan2.jpg"
+            alt="San Gimignano - Pixabay"
+            class="pixabay-img"
+          />
+        </div>
+        <div class="area-vazio1" aria-hidden="true"></div>
+
+        <!-- Tabela de Dados -->
+        <section class="area-tabela">
+          <h3>Dados da Cidade</h3>
+          <table>
+            <tr>
+              <th rowspan="2" class="categoria">Demografia</th>
+              <th>População</th>
+              <td>7.105 hab.</td>
+            </tr>
+            <tr>
+              <th>Densidade Populacional</th>
+              <td>89 hab./km²</td>
+            </tr>
+            <tr>
+              <th rowspan="3" class="categoria">Geografia</th>
+              <th>Área</th>
+              <td>79,7 km²</td>
+            </tr>
+            <tr>
+              <th>Região</th>
+              <td>Toscana (Siena)</td>
+            </tr>
+            <tr>
+              <th>País</th>
+              <td>Itália</td>
+            </tr>
+            <tr>
+              <th class="categoria">Website</th>
+              <td colspan="2">
+                <a
+                  href="https://www.comune.sangimignano.si.it/"
+                  target="_blank"
+                  class="website-link"
+                >
+                  www.comune.sangimignano.si.it
+                </a>
+              </td>
+            </tr>
+          </table>
+        </section>
+
+        <!-- Imagem Pixabay 2 -->
+        <div class="area-img2">
+          <img
+            src="images/imagemsan3.jpg"
+            alt="Toscana Paisagem - Pixabay"
+            class="pixabay-img"
+          />
+        </div>
+
+        <!-- Curiosidades -->
+        <section class="area-curiosidades">
+          <h3>5 Curiosidades sobre San Gimignano</h3>
+          <ol class="curiosidades">
+            <li>
+              <strong>Manhattan da Idade Média:</strong> Chegou a ter 72 torres
+              medievais no seu auge; hoje restam 14, que criam um visual único
+              no horizonte.
+            </li>
+            <li>
+              <strong>Património Mundial da UNESCO:</strong> O seu centro
+              histórico foi declarado Património Mundial em 1990 devido à
+              preservação da arquitetura medieval.
+            </li>
+            <li>
+              <strong>O Vinho Vernaccia:</strong> Produz um dos vinhos brancos
+              mais antigos e famosos de Itália, o
+              <em>Vernaccia di San Gimignano</em>, mencionado até por Dante
+              Alighieri na Divina Comédia.
+            </li>
+            <li>
+              <strong>Palco do Assassin's Creed II:</strong> A cidade foi
+              recriada ao pormenor no famoso videojogo de 2009, permitindo aos
+              jogadores escalar as suas torres medievais.
+            </li>
+            <li>
+              <strong>Gelado Campeão do Mundo:</strong> Na Piazza della Cisterna
+              encontra-se a <em>Gelateria Dondoli</em>, cujo mestre geladeiro
+              venceu múltiplos campeonatos mundiais de fabrico de gelados.
+            </li>
+          </ol>
+        </section>
+
+        <!-- SEGUNDO ESPAÇO VAZIO (Respiro no Grid) -->
+        <div class="area-vazio2" aria-hidden="true"></div>
+      </div>
+    </main>
+
+    <footer>
+      <p>DIW 2026</p>
+    </footer>
+  </body>
+</html>

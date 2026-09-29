@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #e0e0e0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: rgb(90, 197, 216);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 38px;
+  letter-spacing: 1px;
+}
+
+nav {
+  background-color: #222222;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #333333;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 1px solid #444444;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgb(90, 197, 216);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  padding: 0;
+  margin: 0;
+}
+
+/* NAVEGAÇÃO DE ÂNCORAS DA PÁGINA */
+nav.ancoras {
+  background: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+nav.ancoras ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav.ancoras a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav.ancoras a:hover {
+  background-color: #d0e2f0;
+  transform: translateY(-2px);
+}
+
+/* ESTRUTURA DAS SECÇÕES PARA OCUPAREM O ECRÃ */
+main > section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* CORES DE FUNDO DIFERENTES PARA DIFERENCIAR CONTEÚDOS */
+#apresentacao {
+  background-color: #f4f6f8;
+  color: #2c3e50;
+}
+
+#sec-video {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+#sec-fotografias {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+#sec-poesia {
+  background-color: #2d241e;
+  color: #f5ebd9;
+}
+
+/* SECÇÃO HERO / DESTAQUE (LARGURA TOTAL E POSITION RELATIVE/ABSOLUTE) */
+.sec-destaque {
+  padding: 0 !important;
+  width: 100%;
+}
+
+.destaque-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.img-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.texto-emblematico {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3.5vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  width: 80%;
+}
+
+/* FOTOGRAFIAS E TRANSITION */
+.fotografias {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.fotografias img {
+  width: 180px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  padding: 6px;
+  background-color: rgb(90, 197, 216);
+  cursor: pointer;
+
+  /* Transição configurada de acordo com o exemplo */
+  transition: transform 0.4s ease, width 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Efeito Hover nas fotografias */
+.fotografias img:hover {
+  width: 210px;
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* POEMA */
+.poema-container {
+  background-color: #f9f6f0;
+  padding: 30px;
+  border-left: 5px solid #8b5a2b;
+  margin: 20px 0;
+  max-width: 500px;
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  background-color: #222222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}

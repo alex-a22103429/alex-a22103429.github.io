@@ -2,40 +2,100 @@
 <html lang="pt">
   <head>
     <meta charset="utf-8" />
-    <title>Primeira Página</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desenvolvimento de Interfaces Web</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Primeira Página Web!</h1>
+      <nav class="hero-nav">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#cadeira">Interfaces Web</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-      <p>Eis a minha primeira página Web!</p>
-      <p>
-        Na Unidade Curricular de
-        <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232">
-          Desenvolvimento de Interfaces Web
-        </a>
-        abordaremos as seguintes tecnologias Web &#127760;:
-      </p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React e Next.js</li>
-      </ul>
-      <p>Iremos criar soluções criativas!</p>
-      <nav>
-        <ul>
-          <li><a href="../cidade/lab1/index.html">Lab1</a></li>
-          <li><a href="../cidade/lab2/index.html">Lab2</a></li>
-        </ul>
-      </nav>
-      <img
-        src="images/diw.svg"
-        alt="Desenvolvimento de Interfaces Web"
-        style="width: 300px"
-      />
+      <section id="inicio">
+        <div class="hero-content">
+          <h1 class="hero-title">O Código é a Nossa Melhor Arma</h1>
+          <p class="hero-subtitle">
+            Conecta sistemas, domina a Web e transforma o digital.
+          </p>
+          <a href="#projetos" class="cta-button">Ver Projetos</a>
+        </div>
+      </section>
+
+      <section id="projetos">
+        <div class="projects-container">
+          <div class="projects-header">
+            <span class="section-tag">Portfólio</span>
+            <h2>Labs & Exercícios</h2>
+            <p class="section-desc">
+              Projetos práticos desenvolvidos durante as aulas de DIW.
+            </p>
+          </div>
+
+          <div class="cards-grid">
+            <a href="../cidade/lab1/index.html" class="card-item">
+              <div class="card-badge">Lab 01</div>
+              <h3>Estrutura Web</h3>
+              <p>Introdução à semântica HTML5 e organização de conteúdos.</p>
+              <span class="card-link">Ver projeto &rarr;</span>
+            </a>
+
+            <a href="../cidade/lab2/index.html" class="card-item">
+              <div class="card-badge">Lab 02</div>
+              <h3>Estilo & Layout</h3>
+              <p>
+                Aplicação de CSS3, cores, tipografia e regras de responsividade.
+              </p>
+              <span class="card-link">Ver projeto &rarr;</span>
+            </a>
+
+            <a href="../cidade/lab3/index.html" class="card-item">
+              <div class="card-badge">Lab 03</div>
+              <h3>Interatividade</h3>
+              <p>
+                Comportamentos dinâmicos e manipulação do DOM com JavaScript.
+              </p>
+              <span class="card-link">Ver projeto &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="cadeira">
+        <div class="diw-container">
+          <div class="diw-text">
+            <h2>Desenvolvimento de Interfaces Web</h2>
+            <p>Eis a minha primeira página Web!</p>
+            <p>
+              Na Unidade Curricular de
+              <a
+                href="https://moodle.ensinolusofona.pt/course/view.php?id=11232"
+                target="_blank"
+              >
+                Desenvolvimento de Interfaces Web
+              </a>
+              abordaremos as seguintes tecnologias Web &#127760;:
+            </p>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React e Next.js</li>
+            </ul>
+            <p>Iremos criar soluções criativas!</p>
+          </div>
+
+          <div class="diw-media">
+            <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web" />
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>

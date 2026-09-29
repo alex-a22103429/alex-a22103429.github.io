@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>San Gimignano - Multimédia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* --- ESTILOS EXCLUSIVOS DA PÁGINA MULTIMÉDIA --- */
+
+      /* Estrutura para as secções ocuparem a tela */
+      main > section {
+        min-height: 100vh;
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      /* 1. SECÇÃO INICIAL (Fim do fundo branco, cartão moderno e centralizado) */
+      #apresentacao {
+        background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+        color: #ffffff;
+      }
+
+      .apresentacao-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 50px 40px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        max-width: 850px;
+        width: 100%;
+      }
+
+      #apresentacao h2 {
+        font-size: 3.5rem; /* Título Multimédia bem maior */
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: rgb(90, 197, 216);
+        letter-spacing: 1px;
+      }
+
+      #apresentacao p {
+        font-size: 1.2rem;
+        color: #d1d5db;
+        margin-bottom: 35px;
+      }
+
+      /* Botões/Âncoras com espaçamento maior */
+      nav.ancoras {
+        background: none;
+        padding: 0;
+        margin-top: 10px;
+      }
+
+      nav.ancoras ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px; /* ESPAÇO MAIOR ENTRE BOTÕES */
+        padding: 0;
+        margin: 0;
+      }
+
+      nav.ancoras a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 12px 24px;
+        background-color: rgba(90, 197, 216, 0.15);
+        border: 1px solid rgb(90, 197, 216);
+        border-radius: 8px;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+
+      nav.ancoras a:hover {
+        background-color: rgb(90, 197, 216);
+        color: #111827;
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(90, 197, 216, 0.4);
+      }
+
+      /* 2. SECÇÃO DESTAQUE (Imagem 100% largura + texto em vw com position) */
+      .sec-destaque {
+        padding: 0 !important;
+        width: 100%;
+      }
+
+      .destaque-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .img-full {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .texto-emblematico {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        font-size: 3.5vw; /* Tamanho da fonte em VW */
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.85);
+        background: rgba(0, 0, 0, 0.4);
+        padding: 20px 30px;
+        border-radius: 12px;
+        backdrop-filter: blur(4px);
+        width: 80%;
+      }
+
+      /* 3. OUTRAS SECÇÕES COM CORES DE FUNDO DIFERENTES */
+      #sec-video {
+        background-color: #1e293b;
+        color: #ffffff;
+      }
+
+      #sec-fotografias {
+        background-color: #0f172a;
+        color: #ffffff;
+      }
+
+      #sec-poesia {
+        background-color: #2d241e;
+        color: #f5ebd9;
+      }
+
+      /* 4. TRANSITION NAS IMAGENS PEQUENAS */
+      .fotografias {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px 0;
+      }
+
+      .fotografias img {
+        width: 180px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 12px;
+        padding: 6px;
+        background-color: rgb(90, 197, 216);
+        cursor: pointer;
+        /* Aplicação de transition */
+        transition:
+          transform 0.4s ease,
+          width 0.4s ease,
+          box-shadow 0.4s ease;
+      }
+
+      .fotografias img:hover {
+        width: 210px;
+        transform: translateY(-8px) scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      /* 5. ESTILOS DO POEMA */
+      .poema-container {
+        background-color: #f9f6f0;
+        padding: 30px;
+        border-left: 5px solid #8b5a2b;
+        margin: 20px 0;
+        max-width: 500px;
+        width: 100%;
+        text-align: left;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .poema-container p:nth-child(odd) {
+        color: #4a2e16;
+        padding-left: 0px;
+      }
+
+      .poema-container p:nth-child(even) {
+        color: #a06d14;
+        padding-left: 25px;
+        font-style: italic;
+      }
+
+      .poema-container p:nth-child(1) {
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #8b5a2b;
+      }
+
+      .poema-container p:nth-child(5) {
+        margin-bottom: 20px;
+      }
+
+      .poema-container p:nth-child(9) {
+        font-weight: bold;
+        color: #2c1a0e;
+        border-top: 1px dashed #d3c4b1;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>San Gimignano</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="local.html">Localização</a>
+        <a href="multimedia.html">Multimédia</a>
+        <a href="info.html">Informação</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Secção de Apresentação -->
+      <section id="apresentacao">
+        <div class="apresentacao-card">
+          <h2>Multimédia</h2>
+          <p>Nesta página encontra conteúdos multimédia sobre San Gimignano.</p>
+          <nav class="ancoras">
+            <ul>
+              <li><a href="#destaque">Ir para Destaque</a></li>
+              <li><a href="#video">Ir para Vídeo</a></li>
+              <li><a href="#fotografias">Ir para Fotografias</a></li>
+              <li><a href="#poesia">Ir para Poesia</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Secção Destaque  -->
+      <section id="destaque" class="sec-destaque">
+        <div class="destaque-container">
+          <img
+            src="images/imagemsan1.jpg"
+            alt="San Gimignano Panorama"
+            class="img-full"
+          />
+          <div class="texto-emblematico">
+            San Gimignano — A Cidade das Belas Torres
+          </div>
+        </div>
+      </section>
+
+      <!-- Secção Vídeo -->
+      <section id="sec-video">
+        <h3 id="video">Vídeo</h3>
+        <p>
+          Vê este vídeo com uma vista panorâmica em drone da cidade de San
+          Gimignano:
+        </p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/xhRSgDZF33I"
+          title="San Gimignano Drone View"
+          frameborder="0"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+          "
+          allowfullscreen
+        >
+        </iframe>
+      </section>
+
+      <!-- Secção Fotografias com Transitions -->
+      <section id="sec-fotografias">
+        <h3 id="fotografias">Fotografias</h3>
+        <div class="fotografias">
+          <img src="images/facts1.jpg" alt="game vs real life" />
+          <img src="images/jogo1.jpg" alt="gameBeauty" />
+          <img src="images/jogo2.jpg" alt="game vs real life 1" />
+          <img src="images/jogo3.jpg" alt="game vs real life 2" />
+          <img src="images/real1.jpg" alt="mainPraça" />
+          <img src="images/real2.jpg" alt="Vista de longe" />
+          <img src="images/real3.jpg" alt="Vista de cima" />
+          <img src="images/real4.jpg" alt="Gelataria" />
+        </div>
+      </section>
+
+      <!-- Secção Poesia -->
+      <section id="sec-poesia">
+        <h3 id="poesia">Poesia</h3>
+        <div class="poema-container">
+          <p>Torres de pedra a tocar o céu,</p>
+          <p>Guardam memórias de um tempo antigo,</p>
+          <p>Onde o sol veste o morro num véu,</p>
+          <p>E a Toscana encontra o seu abrigo.</p>
+
+          <p>Pelas vielas de pedra e história,</p>
+          <p>Ezio saltou sob o luar da cidade,</p>
+          <p>San Gimignano gravou na memória,</p>
+          <p>Orgulho, encanto e eternidade.</p>
+          <p>Cidade das torres sem fim.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>DIW 2026</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+* {
+      padding: 0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+    }
+
+    /* Regras base para todos os navs */
+    nav {
+      display: flex; /* Ativa o Flexbox */
+      margin: 20px 0;
+      padding: 20px;
+      gap: 20px;
+      background: whitesmoke;
+    }
+
+    /* Estilização dos botões/links */
+    nav a {
+      padding: 10px 20px;
+      background-color: white;
+      text-decoration: none;
+      color: black;
+      border-radius: 5px;
+      box-shadow: 2px 3px 3px lightgrey;
+    }
+
+    /* 1º Nav: Alinhado ao centro */
+    nav:nth-of-type(1) {
+      justify-content: center;
+    }
+
+    /* 2º Nav: Alinhado à direita */
+    nav:nth-of-type(2) {
+      justify-content: flex-end;
+    }
+
+    /* 3º Nav: Espaço entre os botões (Encosta nas bordas) */
+    nav:nth-of-type(3) {
+      justify-content: space-between;
+    }
+
+    /* 4º Nav: Espaço proporcional ao redor de cada botão */
+    nav:nth-of-type(4) {
+      justify-content: space-around;
+    }
