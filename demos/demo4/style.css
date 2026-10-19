@@ -1,0 +1,10 @@
+.caixa-modelo {
+  background-color: #2ecc71; /* background */
+  color: #fff;
+  padding: 30px;             /* espaçamento interno */
+  margin: 20px;              /* espaçamento externo */
+  border: 5px solid #27ae60; /* borda */
+  border-radius: 15px;       /* cantos arredondados */
+  width: 200px;
+  text-align: center;
+}

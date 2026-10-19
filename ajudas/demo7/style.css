@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #111827;
+  color: #f9fafb;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Layout Grid base */
+.grid-layout {
+  display: grid;
+  grid-template-areas:
+    "header  header  header"
+    "nav     main    aside"
+    "footer  footer  footer";
+  grid-template-columns: 200px 1fr 220px;
+  grid-template-rows: auto 1fr auto;
+  gap: 15px;
+  min-height: calc(100vh - 40px);
+}
+
+.grid-header {
+  grid-area: header;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-link {
+  color: #2ecc71;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.grid-nav {
+  grid-area: nav;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.grid-nav ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.grid-nav a {
+  color: #9ca3af;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.grid-nav a:hover {
+  color: #2ecc71;
+}
+
+/* Secção Main dividida: Título à Esquerda e Lista à Direita */
+.grid-main {
+  grid-area: main;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-content-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.main-title {
+  flex: 1;
+  text-align: left;
+}
+
+.main-title h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #f9fafb;
+}
+
+.main-title p {
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.main-list {
+  flex: 1;
+  text-align: left;
+}
+
+.main-list h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #2ecc71;
+}
+
+.main-list ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+
+.grid-aside {
+  grid-area: aside;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.grid-footer {
+  grid-area: footer;
+  background-color: #1f2937;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade: empilha o título e a lista em ecrãs mais pequenos */
+@media (max-width: 800px) {
+  .main-content-split {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-layout {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}

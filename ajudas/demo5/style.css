@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #111827;
+  color: #f9fafb;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Layout Grid base para Ecrãs Grandes (Lado a lado) */
+.grid-layout {
+  display: grid;
+  grid-template-areas:
+    "header  header  header"
+    "nav     main    aside"
+    "footer  footer  footer";
+  grid-template-columns: 220px 1fr 220px;
+  grid-template-rows: auto 1fr auto;
+  gap: 15px;
+  min-height: calc(100vh - 40px);
+}
+
+.grid-header {
+  grid-area: header;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-link {
+  color: #2ecc71;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.grid-nav {
+  grid-area: nav;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.grid-nav ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.grid-nav a {
+  color: #9ca3af;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.grid-nav a:hover {
+  color: #2ecc71;
+}
+
+.grid-main {
+  grid-area: main;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.grid-aside {
+  grid-area: aside;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.grid-footer {
+  grid-area: footer;
+  background-color: #1f2937;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Media Query para Ecrãs Médios / Tablets (Reduz colunas laterais) */
+@media (max-width: 900px) {
+  .grid-layout {
+    grid-template-areas:
+      "header header"
+      "nav    main"
+      "aside  aside"
+      "footer footer";
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+/* Media Query para Telemóveis / Ecrãs Pequenos (Empilha tudo verticalmente) */
+@media (max-width: 600px) {
+  .grid-layout {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}

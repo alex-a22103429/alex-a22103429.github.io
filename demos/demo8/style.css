@@ -1,0 +1,15 @@
+.imagem-container {
+  position: relative; /* Define o referencial para o elemento absoluto */
+  display: inline-block;
+  width: 100%;
+}
+
+.texto-sobreposto {
+  position: absolute; /* Retira do fluxo normal e posiciona em relação ao container */
+  bottom: 20px;
+  left: 20px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro translúcido */
+  padding: 10px 20px;
+  border-radius: 5px;
+}

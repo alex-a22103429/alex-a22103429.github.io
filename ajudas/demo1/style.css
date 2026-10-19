@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    text-align: center;
+}
+
+.caixa-responsiva {
+    background-color: #e74c3c; /* Cor para ecrãs grandes (PC) */
+    color: white;
+    padding: 40px;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Media Query: Altera o estilo em ecrãs menores que 768px */
+@media (max-width: 768px) {
+    .caixa-responsiva {
+        background-color: #2ecc71; /* Muda para verde no telemóvel */
+        font-size: 16px;
+        padding: 20px;
+    }
+}

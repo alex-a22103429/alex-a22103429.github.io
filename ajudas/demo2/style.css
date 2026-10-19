@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #111827;
+  color: #f9fafb;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Layout Grid base */
+.grid-layout {
+  display: grid;
+  grid-template-areas:
+    "header  header  header"
+    "nav     main    aside"
+    "footer  footer  footer";
+  grid-template-columns: 200px 1fr 220px;
+  grid-template-rows: auto 1fr auto;
+  gap: 15px;
+  min-height: calc(100vh - 40px);
+}
+
+.grid-header {
+  grid-area: header;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-link {
+  color: #2ecc71;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.grid-nav {
+  grid-area: nav;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.grid-nav ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.grid-nav a {
+  color: #9ca3af;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.grid-nav a:hover {
+  color: #2ecc71;
+}
+
+.grid-main {
+  grid-area: main;
+  background-color: #1f2937;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilização específica do Demo 2 */
+.list-container {
+  max-width: 500px;
+}
+
+.list-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #f39c12; /* Cor destacada para o título da lista */
+}
+
+.custom-list {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-list li {
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Linha 1 a Verde */
+.custom-list li.linha-1 {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+  border: 1px solid #2ecc71;
+}
+
+/* Linha 2 a Azul */
+.custom-list li.linha-2 {
+  background-color: rgba(52, 152, 219, 0.15);
+  color: #3498db;
+  border: 1px solid #3498db;
+}
+
+.grid-aside {
+  grid-area: aside;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.grid-footer {
+  grid-area: footer;
+  background-color: #1f2937;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade para ecrãs pequenos */
+@media (max-width: 600px) {
+  .grid-layout {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}

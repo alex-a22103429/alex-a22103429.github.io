@@ -1,0 +1,14 @@
+.caixa-responsiva {
+  background-color: #3498db; /* Cor para computadores */
+  color: white;
+  padding: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* Se o ecrã tiver menos de 600px de largura (telemóvel) */
+@media (max-width: 600px) {
+  .caixa-responsiva {
+    background-color: #e74c3c; /* Muda de cor no telemóvel */
+  }
+}
